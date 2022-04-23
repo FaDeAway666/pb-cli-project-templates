@@ -1,0 +1,41 @@
+{
+  "name": "pb-cli-project-templates",
+  "version": "1.0.0",
+  "description": "project templates created by pb-li",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaDeAway666/pb-cli-project-templates.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FaDeAway666/pb-cli-project-templates/issues"
+  },
+  "homepage": "https://github.com/FaDeAway666/pb-cli-project-templates#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2"
+  },
+  "lint-staged": [
+    "prettier --write",
+    "eslint -c './.eslintrc' --ext .js,.vue"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "npx --no-install commitlint --config commitlint.config.js --edit $1",
+      "pre-commit": "npx lint-staged"
+    }
+  }
+}
