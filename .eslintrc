@@ -10,5 +10,5 @@
     "commonjs": true
   },
   "extends": ["plugin:vue/vue3-recommended", "prettier"],
-  "plugins": ["vue", "prettier"]
+  "plugins": ["vue", "html", "prettier"]
 }

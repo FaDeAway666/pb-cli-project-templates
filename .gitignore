@@ -1,4 +1,5 @@
 /node_modules/
 
-# lock
+# log
 yarn.lock
+yarn-error.log
