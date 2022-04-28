@@ -12,9 +12,9 @@ module.exports = {
       'style', // 修改样式
       'chore', // 依赖库、工具依赖、配置文件
       'test', // 测试
-      'perf', //
-      'docs', //
-    ],
+      'perf', // 优化
+      'docs' // 文档
+    ]
   ],
-  'subject-empty': [2, 'never'], //
+  'subject-empty': [2, 'never'] //
 }

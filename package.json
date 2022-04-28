@@ -20,6 +20,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
+    "@ls-lint/ls-lint": "^1.11.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-html": "^6.2.0",
@@ -36,11 +37,5 @@
   "lint-staged": {
     "*.{js,vue}": "eslint -c './.eslintrc' --ext .js,.vue",
     "*.{css,less,scss}": "stylelint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "npx --no-install commitlint --config commitlint.config.js --edit $1",
-      "pre-commit": "npx lint-staged"
-    }
   }
 }
