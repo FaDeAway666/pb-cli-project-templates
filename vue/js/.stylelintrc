@@ -1,5 +1,9 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-recommended-vue"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-vue",
+    "stylelint-config-recommended-less"
+  ],
   "plugins": ["stylelint-order"],
   "rules": {
     "string-quotes": "single",
