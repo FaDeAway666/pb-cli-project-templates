@@ -25,6 +25,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-vue": "^8.7.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
@@ -37,7 +38,7 @@
     "stylelint-order": "^5.0.0"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint -c './.eslintrc' --ext .js,.vue",
+    "*.{js,vue}": "eslint -c './.eslintrc' --ext .js,.vue,.jsx,.ts,.tsx",
     "*.{css,less}": "stylelint --fix --custom-syntax postcss-less"
   }
 }

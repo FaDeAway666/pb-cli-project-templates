@@ -9,6 +9,9 @@
     "node": true,
     "commonjs": true
   },
-  "extends": ["plugin:vue/vue3-recommended", "prettier"],
-  "plugins": ["vue", "html", "prettier"]
+  "extends": ["plugin:vue/vue3-recommended", "plugin:react/recommended", "prettier"],
+  "plugins": ["vue", "react", "html", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
