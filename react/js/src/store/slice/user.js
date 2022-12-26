@@ -1,16 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { userSignout } from "../../api/user";
+
+export const SIGN_OUT = createAsyncThunk("user/signOut", async (userId) => {
+  try {
+    const response = await userSignout({ userId })
+    return response
+  } catch (e) {
+    console.log(e, "error")
+    return e
+  }
+})
 
 const userSlice = createSlice({
   name: "user",
   initialState: {
     userInfo: {},
   },
-  reducers: {
-    getUserInfo: (state, action) => {
-      state.userInfo = action.payload;
-    },
-  },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(SIGN_OUT.fulfilled, (state, action) => {
+      console.log(action.payload, "fill payload")
+      state.userInfo = {}
+    })
+  }
 });
 
-export const { getUserInfo } = userSlice.actions;
 export default userSlice.reducer;
