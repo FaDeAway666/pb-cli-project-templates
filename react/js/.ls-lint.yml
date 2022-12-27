@@ -1,0 +1,11 @@
+ls:
+  src:
+    .js: kebab-case
+    .ts: kebab-case
+    .d.ts: kebab-case
+    .tsx: kebab-case
+    .jsx: kebab-case
+
+ignore:
+  - .git
+  - node_modules

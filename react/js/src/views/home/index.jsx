@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom"
-import { useDispatch } from "react-redux"
-import { SIGN_OUT } from "../../store/slice/user"
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { SIGN_OUT } from '../../store/slice/user'
 
-function PageHome () {
+function PageHome() {
   const navi = useNavigate()
   const dispatch = useDispatch()
 
@@ -11,10 +11,14 @@ function PageHome () {
   }
 
   signout()
-  return <>
-    <h1 className="text-center text-lg">Home</h1>
-    <button className="container w-20 border" onClick={() => navi('/about')}>go</button>
-  </>
+  return (
+    <>
+      <h1 className="text-center text-lg">Home</h1>
+      <button className="container w-20 border" onClick={() => navi('/about')}>
+        go
+      </button>
+    </>
+  )
 }
 
 export default PageHome
