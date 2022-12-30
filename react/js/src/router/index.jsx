@@ -1,19 +1,19 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom"
-import PageAbout from "../views/about"
-import PageHome from "../views/home"
-import routeConfig from "./config"
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import routeConfig from './config'
 
 function renderRoute(routes) {
   return routes.map(route => {
-    const {path, key, element} = route
+    const { path, key, element } = route
     const config = {
       path,
       key,
       element
     }
-    return <Route {...config}>
-      {route.children ? renderRoute(route.children) : null}
-    </Route>
+    return (
+      <Route {...config} key={config.key}>
+        {route.children ? renderRoute(route.children) : null}
+      </Route>
+    )
   })
 }
 

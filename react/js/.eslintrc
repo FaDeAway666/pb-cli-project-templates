@@ -9,7 +9,7 @@
     "node": true,
     "commonjs": true
   },
-  "extends": ["plugin:react/recommended", "prettier"],
+  "extends": ["plugin:react/recommended", "eslint:recommended", "prettier"],
   "plugins": ["react", "html", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off"

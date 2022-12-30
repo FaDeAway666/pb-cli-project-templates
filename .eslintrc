@@ -9,7 +9,12 @@
     "node": true,
     "commonjs": true
   },
-  "extends": ["plugin:vue/vue3-recommended", "plugin:react/recommended", "prettier"],
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "eslint:recommended"
+  ],
   "plugins": ["vue", "react", "html", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off"
