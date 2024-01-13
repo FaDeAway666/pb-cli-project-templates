@@ -9,9 +9,18 @@
     "node": true,
     "commonjs": true
   },
-  "extends": ["plugin:react/recommended", "eslint:recommended", "prettier"],
-  "plugins": ["react", "html", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "react-hooks", "react-refresh", "prettier"],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ]
   }
 }
