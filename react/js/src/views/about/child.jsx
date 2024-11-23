@@ -1,24 +1,21 @@
 import { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { increment } from '../../store/slice/count'
+import useCountStore from '@/store/count'
 
 function PageChild() {
   useEffect(() => {
     console.log('child render')
   }, [])
 
-  const countState = useSelector(state => state.count)
-  const dispatch = useDispatch()
-
-  function add() {
-    dispatch(increment())
-  }
+  const count = useCountStore(state => state.count)
+  const increment = useCountStore(state => state.increment)
+  const decrement = useCountStore(state => state.decrement)
 
   return (
     <>
       <h3>child</h3>
-      <p>{countState.count}</p>
-      <button onClick={add}>add</button>
+      <p>{count}</p>
+      <button onClick={increment}>add</button>
+      <button onClick={decrement}>sub</button>
     </>
   )
 }
