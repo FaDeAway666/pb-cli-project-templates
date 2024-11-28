@@ -21,6 +21,8 @@
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@ls-lint/ls-lint": "^1.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-html": "^6.2.0",
@@ -38,7 +40,7 @@
     "stylelint-order": "^5.0.0"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint -c './.eslintrc' --ext .js,.vue,.jsx,.ts,.tsx",
+    "*.{js,vue,ts,tsx}": "eslint -c './.eslintrc' --ext .js,.vue,.jsx,.ts,.tsx",
     "*.{css,less}": "stylelint --fix --custom-syntax postcss-less"
   }
 }
