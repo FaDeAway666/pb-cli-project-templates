@@ -1,8 +1,7 @@
 {
   "root": true,
-  "parser": "vue-eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "parser": "@typescript-eslint/parser",
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
@@ -15,13 +14,12 @@
     "commonjs": true
   },
   "extends": [
-    "plugin:vue/vue3-recommended",
-    // "plugin:react/recommended",
+    "plugin:react/recommended",
     "prettier",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended"
   ],
-  "plugins": ["vue", "html", "prettier"],
+  "plugins": ["react", "html", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off"
   },

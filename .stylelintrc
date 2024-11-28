@@ -13,6 +13,7 @@
         "ignorePseudoClasses": ["deep"]
       }
     ],
+    "no-duplicate-selectors": [null],
     "order/properties-order": [
       "position",
       "top",
