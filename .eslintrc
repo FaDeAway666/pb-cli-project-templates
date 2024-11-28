@@ -14,13 +14,13 @@
     "commonjs": true
   },
   "extends": [
-    // "plugin:vue/vue3-recommended",
+    "plugin:vue/vue3-recommended",
     "plugin:react/recommended",
     "prettier",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended"
   ],
-  "plugins": ["react", "html", "prettier"],
+  "plugins": ["vue", "react", "html", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off"
   },
